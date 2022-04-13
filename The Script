@@ -1,0 +1,19 @@
+// ==UserScript==
+// @name         messageTemplate
+// @namespace    http://tampermonkey.net/
+// @version      1.0
+// @description  sends an alert when you press a certain button
+// @author       purefishmonke
+// @match        https://*/*
+// ==/UserScript==
+
+// how to use:
+// Replace the "your text here" with whatever text you want to show up
+// Next, press ' (the quote button on your keyboard) to send the alert. You can change which button it is by changing the keycode value (the number 222)
+// To find keycodes go to https://keycode.info/ and follow the simple instructions from there (I am not affiliated with that website in any way except using it)
+
+window.onkeydown = function(event) {
+   if (event.keyCode === 222) {
+      alert("your text here");
+   }
+};
